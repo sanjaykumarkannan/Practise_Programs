@@ -12,19 +12,38 @@ class TwistedPrime
   public void primeornot(int num)
   {
     int mid=num/2;
-    for (int i=2;i<mid;i++)
+    for (int i=2;i<=mid;i++)
     {
-      if(mid%i==0)
+      if(num%i==0)
       {
-        System.out.println(num+"is not a twisted prime number.");
-        break;
+        System.out.println(num+" is not a twisted prime number.");
+        return;
       }
     }
+    int rev=0;
+    int num1=num;
+    int d;
+    while(num1>0)
+    {
+      d=num1%10;
+      rev=rev*10+d;
+      num1=num1/10;
+    }
+    mid=rev/2;
+    for (int i=2;i<=mid;i++)
+    {
+      if(rev%i==0)
+      {
+        System.out.println(num+" is not a twisted prime number.");
+        return;
+      }
+    }
+    System.out.println(num+" is a twisted prime number!");
   }
   public static void main(String args[])
   {
     TwistedPrime tp=new TwistedPrime();
-    int num=23;
+    int num=2;
     tp.primeornot(num);
   }
 }
