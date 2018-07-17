@@ -43,7 +43,7 @@ class TwistedPrime
   public static void main(String args[])
   {
     TwistedPrime tp=new TwistedPrime();
-    int num=2;
+    int num=123;
     tp.primeornot(num);
   }
 }
