@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 public class StreamsApi {
 
@@ -19,7 +21,16 @@ public class StreamsApi {
 		}
 		);
 		
+		int cores = Runtime.getRuntime().availableProcessors();
+		System.out.println(cores);
 		
+		//Learning to iterate maps using lambda expression
+		Map<String,Integer> testMap=new HashMap<String,Integer>();
+		testMap.put("Sanjay", 25);
+		testMap.put("Praveen", 35);
+		testMap.put("Ammu", 21);
+		
+		testMap.forEach((k,v)-> System.out.println("key "+k+" value "+v));
 	}
 
 }
